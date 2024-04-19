@@ -1,0 +1,60 @@
+{
+    "info": {
+        "name": "Invoicing API Collection",
+        "description": "This is a collection of API requests for the Invoicing application.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "List All Invoices",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/invoices",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "invoices"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Invoice",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"vendor_name\": \"Example Vendor\",\n    \"amount\": 200.00,\n    \"due_date\": \"2023-12-31\",\n    \"description\": \"Example invoice description\",\n    \"user_id\": 1\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/invoices",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "invoices"
+                    ]
+                }
+            }
+        }
+    ]
+}
